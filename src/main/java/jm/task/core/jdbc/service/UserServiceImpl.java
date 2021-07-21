@@ -14,7 +14,7 @@ public class UserServiceImpl extends Util implements UserService {
         Connection connection = getConnection();
         PreparedStatement preparedStatement = null;
 
-        String sql = "CREATE TABLE USER(id BIGINT, name VARCHAR(255), lastName VARCHAR(255), age INT)";
+        String sql = "CREATE TABLE USER(id BIGINT AUTO_INCREMENT, name VARCHAR(255), lastName VARCHAR(255), age INT, PRIMARY KEY (id))";
 
         try{
             preparedStatement = connection.prepareStatement(sql);
